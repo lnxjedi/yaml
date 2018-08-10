@@ -31,6 +31,7 @@ import (
 	"strings"
 
 	"github.com/lnxjedi/dig"
+	goyaml "gopkg.in/yaml.v1"
 )
 
 type Yaml struct {
@@ -168,7 +169,7 @@ func (self *Yaml) Save() error {
 */
 func (self *Yaml) Write(filename string) error {
 
-	out, err := yaml.Marshal(self.values)
+	out, err := goyaml.Marshal(self.values)
 
 	if err != nil {
 		return err
@@ -212,7 +213,7 @@ func (self *Yaml) Read(filename string) error {
 	buf := make([]byte, filesize)
 	fp.Read(buf)
 
-	err = yaml.Unmarshal(buf, &self.values)
+	err = goyaml.Unmarshal(buf, &self.values)
 
 	if err != nil {
 		return err

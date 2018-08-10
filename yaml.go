@@ -25,12 +25,12 @@ package yaml
 
 import (
 	"fmt"
-	"gopkg.in/yaml.v1"
 	"log"
-	"menteslibres.net/gosexy/dig"
 	"os"
 	"reflect"
 	"strings"
+
+	"github.com/lnxjedi/dig"
 )
 
 type Yaml struct {

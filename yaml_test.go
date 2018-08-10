@@ -1,8 +1,9 @@
 package yaml
 
 import (
-	"menteslibres.net/gosexy/to"
 	"testing"
+
+	"github.com/gosexy/to"
 )
 
 func TestRead(t *testing.T) {
